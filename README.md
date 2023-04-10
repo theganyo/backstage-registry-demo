@@ -29,8 +29,10 @@ registry apply -f apigee-registry.yaml
 registry-connect publish backstage apihub-backstage --owner-name "TEAM NAME" --owner-desc "TEAM DESC"
 ```
 
-1. Start Backstage
+1. Run Backstage
 
 ```sh
 docker-compose up
 ```
+
+[Open Backstage UI](http://localhost:7007)
