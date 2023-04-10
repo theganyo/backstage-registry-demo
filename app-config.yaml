@@ -1,9 +1,9 @@
 app:
-  title: Scaffolded Backstage App
+  title: API Hub Demo
   baseUrl: http://localhost:3000
 
 organization:
-  name: My Company
+  name: API Hub
 
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins
@@ -77,25 +77,33 @@ catalog:
   rules:
     - allow: [Component, System, API, Resource, Location]
   locations:
-    # Local example data, file locations are relative to the backend process, typically `packages/backend`
+    # API Hub
     - type: file
-      target: ../../examples/entities.yaml
-
-    # Local example template
-    - type: file
-      target: ../../examples/template/template.yaml
+      target: /apihub/apihub-catalog.yaml
       rules:
-        - allow: [Template]
+        - allow: [Component, System, Domain, API, Resource, Location, Group]
 
-    # Local example organizational data
-    - type: file
-      target: ../../examples/org.yaml
-      rules:
-        - allow: [User, Group]
+    # # Local example data, file locations are relative to the backend process, typically `packages/backend`
+    # - type: file
+    #   target: ../../examples/entities.yaml
 
-    ## Uncomment these lines to add more example data
+    # # Local example template
+    # - type: file
+    #   target: ../../examples/template/template.yaml
+    #   rules:
+    #     - allow: [Template]
+
+    # # Local example organizational data
+    # - type: file
+    #   target: ../../examples/org.yaml
+    #   rules:
+    #     - allow: [User, Group]
+
+    # Uncomment these lines to add more example data
     # - type: url
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
+    #   rules:
+    #     - allow: [Component, System, Domain, API, Resource, Location, Group, User]
 
     ## Uncomment these lines to add an example org
     # - type: url
