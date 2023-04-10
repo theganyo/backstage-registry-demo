@@ -15,7 +15,7 @@ git clone git@github.com:theganyo/backstage-registry-demo.git
 cd backstage-registry-demo
 ```
 
-1. Import your Apigee data into API Hub (use `--help` for further information on commands)
+2. Import your Apigee data into API Hub (use `--help` for further information on commands)
 
 ```sh
 registry-connect discover apigee proxies YOUR-ORGANIZATION > apigee-registry.yaml
@@ -23,13 +23,13 @@ registry-connect discover apigee proxies YOUR-ORGANIZATION > apigee-registry.yam
 registry apply -f apigee-registry.yaml
 ```
 
-1. Export your API Hub data for Backstage
+3. Export your API Hub data for Backstage
 
 ```sh
 registry-connect publish backstage apihub-backstage --owner-name "TEAM NAME" --owner-desc "TEAM DESC"
 ```
 
-1. Run Backstage
+4. Run Backstage
 
 ```sh
 docker-compose up
