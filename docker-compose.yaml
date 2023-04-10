@@ -1,0 +1,21 @@
+services:
+  backstage:
+    stdin_open: true 
+    tty: true
+    build:
+      context: .
+      dockerfile: packages/backend/Dockerfile
+    image: backstage
+    ports:
+      - 7007:7007
+    volumes:
+      - type: bind
+        source: /tmp/apihub-backstage
+        target: /apihub
+      # - type: volume
+      #   source: apihub
+      #   target: /apihub
+      #   volume:
+      #     nocopy: true
+# volumes:
+#   apihub:
