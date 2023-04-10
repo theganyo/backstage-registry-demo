@@ -36,3 +36,10 @@ docker-compose up
 ```
 
 [Open Backstage UI](http://localhost:7007)
+
+Note: If you have an issue with the Docker image not building, try building it with `docker`
+and then running `docker-compose up`
+
+```sh
+docker build . -f packages/backend/Dockerfile -t backstage
+```
